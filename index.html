@@ -20,9 +20,9 @@
         <div ng-controller="todoController">
           <form name="form" ng-submit="addItem()">
             <input type="text" name="newItem" ng-model="newItem" required>
-            <button ng-disabled="form.$invalid">Add!</button>
+            <button class="btn btn-md btn-primary" ng-disabled="form.$invalid">Add!</button>
           </form>
-          <button ng-click="clearCompleted()">clear complete</button>
+          <button ng-click="clearCompleted()" class="btn btn-md btn-warning">clear complete</button>
           <ul>
             <li ng-repeat="todo in todos">
               <input type="checkbox" ng-model="todo.done"></input>
