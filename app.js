@@ -13,6 +13,8 @@ myApp.controller('todoController', ['$scope', function($scope){
     $scope.newItem = "";
   }
   $scope.clearComplete = function(){
-
-  }
-}])
+    $scope.todos = $scope.todos.filter(function(item){
+      return !item.done
+    })
+  };
+}]);
