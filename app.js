@@ -7,4 +7,7 @@ myApp.controller('todoController', ['$scope', function($scope){
   $scope.addItem = function(){
 
   }
+  $scope.clearComplete = function(){
+
+  }
 }])

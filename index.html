@@ -11,11 +11,15 @@
       <div ng-controller="todoController">
         <form name="form" ng-submit="addItem()">
           <input type="text" name"newItem" ng-model="newItem" required>
-          <button class="btn btn-primary btn-md">Submit</button>
+          <button class="btn btn-primary btn-md" ng-disabled="form.$invalid">Submit</button>
         </form>
+
+        <button ng-click="clearComplete()" class="btn btn-sm btn-warning">Clear Completed</button>
+
         <ul>
           <li ng-repeat="todo in todos">
-            {{todo.title}}
+            <input type="checkbox" ng-model="todo.done"/>
+            <span ng-class="{'done':todo.title}">{{todo.title}}</span>
           </li>
         </ul>
       </div>
