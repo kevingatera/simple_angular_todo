@@ -20,7 +20,7 @@
         <ul>
           <li ng-repeat="todo in todos">
             <input type="checkbox" ng-model="todo.done"/>
-            <span ng-class="{'done':todo.title}">{{todo.title}}</span>
+            <span ng-class="{'done':todo.done}">{{todo.title}}</span>
           </li>
         </ul>
       </div>
