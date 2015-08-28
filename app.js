@@ -5,7 +5,12 @@ myApp.controller('todoController', ['$scope', function($scope){
     {'title':'Test Item', 'done': false}
   ];
   $scope.addItem = function(){
-
+    $scope.todos.push({
+      "title":$scope.newItem,
+      "done":false
+    })
+    // clear form after submission
+    $scope.newItem = "";
   }
   $scope.clearComplete = function(){
 
