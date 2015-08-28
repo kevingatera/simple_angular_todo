@@ -9,6 +9,10 @@
     <div class="container">
       <h1>ToDo List:</h1>
       <div ng-controller="todoController">
+        <form name="form" ng-submit="addItem()">
+          <input type="text" name"newItem" ng-model="newItem" required>
+          <button class="btn btn-primary btn-md">Submit</button>
+        </form>
         <ul>
           <li ng-repeat="todo in todos">
             {{todo.title}}
