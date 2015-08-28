@@ -14,8 +14,8 @@
     </script>
   </head>
   <body>
-    <div class="container">
-      <div class="page-header">
+    <div class="container row">
+      <div class="page-header col-md-6">
         <h1>To Do List</h1>
         <div ng-controller="todoController">
           <form name="form" ng-submit="addItem()">
@@ -31,9 +31,9 @@
           </ul>
         </div>
       </div>
-    </div>
 
-    <div id="authorize-div" style="display: none">
+
+    <div id="authorize-div" style="display: none" class="col-md-6">
       <span>Authorize access to Google Calendar API</span>
       <!--Button for the user to click to initiate auth sequence -->
       <button id="authorize-button" onclick="handleAuthClick(event)">
@@ -41,6 +41,8 @@
       </button>
     </div>
     <pre id="output"></pre>
+
+    </div>
 
   </body>
 </html>
