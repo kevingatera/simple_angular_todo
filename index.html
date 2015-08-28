@@ -6,6 +6,15 @@
     <script src="app.js"></script>
   </head>
   <body>
-
+    <div class="container">
+      <h1>ToDo List:</h1>
+      <div ng-controller="todoController">
+        <ul>
+          <li ng-repeat="todo in todos">
+            {{todo.title}}
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
