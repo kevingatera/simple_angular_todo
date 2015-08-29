@@ -18,3 +18,29 @@ myApp.controller('todoController', ['$scope', function($scope){
     })
   };
 }]);
+
+myApp.controller('calController', ['$scope', '$http', function($scope, $http){
+  $scope.ajaxCall = function(){
+    $http.post('/someUrl', {msg:'hello word!'}).
+    then(function(response) {
+      console.log(response)
+      // this callback will be called asynchronously
+      // when the response is available
+    }, function(response) {
+      // called asynchronously if an error occurs
+      // or server returns response with an error status.
+    });
+  }
+
+  // $scope.ajaxCall = function(){
+  //   $http.get('https://www.googleapis.com/calendar/v3/users/me/calendarList').
+  //   then(function(response) {
+  //     console.log(response)
+  //     // this callback will be called asynchronously
+  //     // when the response is available
+  //   }, function(response) {
+  //     // called asynchronously if an error occurs
+  //     // or server returns response with an error status.
+  //   });
+  // }
+}])
